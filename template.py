@@ -10,7 +10,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO,format='[%(asctime)s]: %(message)s:')
 
-project_name='your_project_name'
+project_name='kitaab technologies'
 
 
 list_of_files=[
@@ -37,10 +37,10 @@ list_of_files=[
 
 for filepath in list_of_files:
     filepath= Path(filepath)
-    filedir=filename= os.path.split(filepath)
+    filedir,filename= os.path.split(str(filepath))
 
 
-    if filedir!="":
+    if filedir !="":
         os.makedirs(filedir,exist_ok=True)
         logging.info(f"Creating directory: {filedir} for the file: {filename}")
 
